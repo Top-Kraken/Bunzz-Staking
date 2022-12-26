@@ -41,30 +41,6 @@ describe("Test EscrowByAgent contract: ", () => {
     [owner, user1, user2, user3, user4, user5, feeWallet] = await ethers.getSigners();
   });
 
-  // async function createPoolWithETH() {
-  //   const option = { value: ethAmount };
-  //   await escrow
-  //     .connect(sender1)
-  //     .depositByETH(recipient1.address, agent1.address, option);
-  //
-  //   await updatePoolId();
-  // }
-  //
-  // async function releasePool(caller: SignerWithAddress, poolId: number) {
-  //   await escrow.connect(caller).release(poolId);
-  // }
-  //
-  // async function cancelPool(caller: SignerWithAddress, poolId: number) {
-  //   await escrow.connect(recipient2).approveCancel(poolId);
-  //   await escrow.connect(sender2).approveCancel(poolId);
-  //   await escrow.connect(caller).cancel(poolId);
-  // }
-  //
-  // async function updatePoolId() {
-  //   poolCount = (await escrow.poolCount()).toNumber();
-  //   poolId = poolCount - 1;
-  // }
-
   describe("1. Deploy contracts", () => {
     it("Deploy mock contracts", async () => {
       const erc20Factory = new MockERC20__factory(owner);
